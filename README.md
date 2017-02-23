@@ -4,7 +4,7 @@ WinCenterClient
 WinCenter-Appliance虚拟化管理系统安装程序。
 
 
-WinCenterClient使用C#编写，目前版本号为6.5
+WinCenterClient使用C#编写，目前版本号为6.5。
 
 
 说明
@@ -18,46 +18,46 @@ WinCenterClient使用C#编写，目前版本号为6.5
 
 V6.5
 
-*优化API  
-*优化性能  
-*支持XenServer7.0/6.5/6.2/6.1  
-*支持WinServer6.5/6.1/6.0/5.5/5.4/5.1/5.0
+* 优化API  
+* 优化性能  
+* 支持XenServer7.0/6.5/6.2/6.1  
+* 支持WinServer6.5/6.1/6.0/5.5/5.4/5.1/5.0
 
 
 
 V5.5
 
-*UI优化  
-*SSH使用Renci.SshNet  
-*优化设置IP等网络信息  
-*.NET升级到4.0  
-*支持XenServer6.5/6.2/6.1  
-*支持WinServer6.1/6.0/5.5/5.4/5.1/5.0
+* UI优化  
+* SSH使用Renci.SshNet  
+* 优化设置IP等网络信息  
+* .NET升级到4.0  
+* 支持XenServer6.5/6.2/6.1  
+* 支持WinServer6.1/6.0/5.5/5.4/5.1/5.0
 
 
 
 V5.4
   
-*存储类型增加EXT  
-*增加license许可  
-*支持XenServer6.2/6.1  
-*支持WinServer5.5/5.4/5.1/5.0
+* 存储类型增加EXT  
+* 增加license许可  
+* 支持XenServer6.2/6.1  
+* 支持WinServer5.5/5.4/5.1/5.0
 
 
 
 V5.1
 
-*UI优化  
-*支持XenServer6.2/6.1  
-*支持WinServer5.1/5.0
+* UI优化  
+* 支持XenServer6.2/6.1  
+* 支持WinServer5.1/5.0
 
 
 
 V5.0
  
-*初始版本  
-*使用AE设置IP等网络信息
-*支持XenServer6.2/6.1
+* 初始版本  
+* 使用AE设置IP等网络信息
+* 支持XenServer6.2/6.1
 
 
 
