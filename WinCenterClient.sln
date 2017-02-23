@@ -1,11 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinCenter", "WinCenter\WinCenter.csproj", "{13F6C84F-6C3C-49BA-AFBA-9CC3472B864D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WizardLib", "WizardLib\WizardLib.csproj", "{C857F938-0FA5-402E-A7CF-6385914AEF67}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinCenterClientSetup", "WizardSetup\WizardSetup.vdproj", "{76670728-8B3F-4B86-A43E-6270E074B5B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSSH", "SharpSSH\SharpSSH.csproj", "{D27CF69D-4681-492A-BE4D-D3D209104423}"
 EndProject
@@ -47,12 +47,6 @@ Global
 		{C857F938-0FA5-402E-A7CF-6385914AEF67}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{C857F938-0FA5-402E-A7CF-6385914AEF67}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C857F938-0FA5-402E-A7CF-6385914AEF67}.Release|x86.ActiveCfg = Release|Any CPU
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Debug|Any CPU.ActiveCfg = Debug
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Debug|x86.ActiveCfg = Debug
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Release|Any CPU.ActiveCfg = Release
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Release|Mixed Platforms.ActiveCfg = Release
-		{76670728-8B3F-4B86-A43E-6270E074B5B2}.Release|x86.ActiveCfg = Release
 		{D27CF69D-4681-492A-BE4D-D3D209104423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D27CF69D-4681-492A-BE4D-D3D209104423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27CF69D-4681-492A-BE4D-D3D209104423}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
