@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13F6C84F-6C3C-49BA-AFBA-9CC3472B864D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wizard</RootNamespace>
+    <AssemblyName>CNware-WinCenter-Client-6.5</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.403, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\libs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\..\libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\Reverser.cs" />
+    <Compile Include="Core\ConnectManager.cs" />
+    <Compile Include="Core\HostOper.cs" />
+    <Compile Include="Core\HTTP.cs" />
+    <Compile Include="Core\HTTPHelper.cs" />
+    <Compile Include="Core\HTTP_actions.cs" />
+    <Compile Include="Core\NetworkOper.cs" />
+    <Compile Include="Core\PIFOper.cs" />
+    <Compile Include="Core\SessionFactory.cs" />
+    <Compile Include="Core\ShellHelp.cs" />
+    <Compile Include="Core\SROper.cs" />
+    <Compile Include="Core\VIFOper.cs" />
+    <Compile Include="Core\VMOper.cs" />
+    <Compile Include="FinishPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinishPage.Designer.cs">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportSourcePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportSourcePage.Designer.cs">
+      <DependentUpon>ImportSourcePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportVMPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImportVMPage.Designer.cs">
+      <DependentUpon>ImportVMPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseAgreement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicenseAgreement.Designer.cs">
+      <DependentUpon>LicenseAgreement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetWorkPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NetWorkPage.Designer.cs">
+      <DependentUpon>NetWorkPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoragePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StoragePage.Designer.cs">
+      <DependentUpon>StoragePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vo\SRVo.cs" />
+    <Compile Include="WelComePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WelComePage.Designer.cs">
+      <DependentUpon>WelComePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HostPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HostPage.Designer.cs">
+      <DependentUpon>HostPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FinishPage.resx">
+      <DependentUpon>FinishPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportSourcePage.resx">
+      <DependentUpon>ImportSourcePage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportVMPage.resx">
+      <DependentUpon>ImportVMPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseAgreement.resx">
+      <DependentUpon>LicenseAgreement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetWorkPage.resx">
+      <DependentUpon>NetWorkPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoragePage.resx">
+      <DependentUpon>StoragePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelComePage.resx">
+      <DependentUpon>WelComePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="HostPage.resx">
+      <DependentUpon>HostPage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Renci.SshNet\Renci.SshNet.csproj">
+      <Project>{27B0F8FB-EC85-434F-8808-DF0550F65769}</Project>
+      <Name>Renci.SshNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpSSH\SharpSSH.csproj">
+      <Project>{D27CF69D-4681-492A-BE4D-D3D209104423}</Project>
+      <Name>SharpSSH</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinServer\WinServer.csproj">
+      <Project>{99474B92-70A6-4B31-9072-1C4D0A194767}</Project>
+      <Name>WinServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WizardLib\WizardLib.csproj">
+      <Project>{C857F938-0FA5-402E-A7CF-6385914AEF67}</Project>
+      <Name>WizardLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%24this.Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
