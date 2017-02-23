@@ -3,6 +3,7 @@ using Wizard.Core;
 using System.Threading;
 using System;
 using System.Windows.Forms;
+using WinAPI;
 
 namespace Wizard {
 	public partial class ImportVMPage : InteriorWizardPage {
@@ -18,6 +19,7 @@ namespace Wizard {
 				return false;
 
 			log.InfoFormat("进入【安装虚拟机】页面");
+            label1.Text = "";
 			ShowData();
 			Wizard.SetWizardButtons(WizardButton.Back);
 			return true;
@@ -55,6 +57,9 @@ namespace Wizard {
 		
 		private void importButton_Click(object sender, System.EventArgs e) {
 			log.InfoFormat("开始安装WinCenter VM");
+            if (!checkMemory()) {
+                return;
+            }
 			importButton.Enabled = false;
 			Wizard.SetWizardButtons(WizardButton.DisabledAll);
 			//注册关闭按钮事件
@@ -67,6 +72,23 @@ namespace Wizard {
 			Thread uiThread = new Thread(new ThreadStart(ChangeProgress));
 			uiThread.Start();
 		}
+
+        private bool checkMemory() {
+            XenRef<Host> hostRef = Host.get_by_uuid(ConnectManager.session, ConnectManager.TargetHost.uuid);
+            ulong free_memory = (ulong)Host.compute_free_memory(ConnectManager.session, hostRef);
+            string hostFreeMemory = string.Format("{0:0.00}GB", free_memory / Constants.UINT);
+            string vmMemory = string.Format("{0:0.00}GB", ConnectManager.Memory / Constants.UINT);
+            log.InfoFormat("物理主机可用内存为{0}，虚拟机需要的内存为{1}", hostFreeMemory, vmMemory);
+
+            if (ConnectManager.Memory > free_memory)
+            {
+                log.ErrorFormat("物理主机的可用内存不够!");
+                label1.Text = "物理主机的可用内存不够！";
+                return false;
+            }
+
+            return true;
+        }
 
 		private void FormClosing(object sender, FormClosingEventArgs e) {
 			e.Cancel = true;
