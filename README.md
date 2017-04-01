@@ -61,6 +61,13 @@ V5.0
 * 支持XenServer6.2/6.1
 
 
+WinCenterClient分析
+---------------------
+
+[WinCenterClient分析（一）](http://www.hl10502.com/2017/02/24/wincenterclient-1/)
+
+[WinCenterClient分析（二）](http://www.hl10502.com/2017/02/24/wincenterclient-2/)
+
 
 
 
